@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/cad_passag_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nome *"
+            android:inputType="textCapWords|textAutoComplete" />
+
+        <EditText
+            android:id="@+id/cad_passag_celular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Celular *"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/cad_passag_cidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Cidade *"
+            android:inputType="textCapWords|textAutoComplete" />
+
+        <EditText
+            android:id="@+id/cad_passag_instituicao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Instituição de ensino *"
+            android:inputType="textCapWords|textAutoComplete" />
+
+        <EditText
+            android:id="@+id/cad_passag_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="CPF"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/cad_passag_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="RG"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/cad_passag_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Título de eleitor"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/cad_passag_salvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar" />
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
