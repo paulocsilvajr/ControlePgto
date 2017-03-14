@@ -20,7 +20,7 @@ import static android.R.attr.data;
  * Created by root on 12/03/17.
  */
 
-public class Backup {
+public class BackupHelper {
     private File bk;
     private File backupDB;
     private File currentDB;
@@ -28,7 +28,7 @@ public class Backup {
     private String backupDBPath;
     private Context context;
 
-    public Backup(Context context) {
+    public BackupHelper(Context context) {
         this.context = context;
 
         bk = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);

@@ -14,11 +14,10 @@ import android.widget.ListView;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
-import br.com.pcorp.controlepgto.helper.Backup;
+import br.com.pcorp.controlepgto.helper.BackupHelper;
 
 public class ListagemArquivosBackup extends AppCompatActivity {
 
@@ -48,8 +47,8 @@ public class ListagemArquivosBackup extends AppCompatActivity {
         File file;
         List<String> lista = new ArrayList<>();
 
-        Backup backup = new Backup(this);
-        file = new File(backup.getBackupDB().getParent());
+        BackupHelper backupHelper = new BackupHelper(this);
+        file = new File(backupHelper.getBackupDB().getParent());
 
         File listaArquivos[] = file.listFiles();
 
@@ -85,9 +84,9 @@ public class ListagemArquivosBackup extends AppCompatActivity {
                         switch (which){
                             case DialogInterface.BUTTON_POSITIVE:
                                 //Ação quando o usuário clicar no botão sim
-                                Backup backup = new Backup(ListagemArquivosBackup.this);
-                                backup.setBackupDBName(arquivo);
-                                backup.restore();
+                                BackupHelper backupHelper = new BackupHelper(ListagemArquivosBackup.this);
+                                backupHelper.setBackupDBName(arquivo);
+                                backupHelper.restore();
 
                                 break;
 

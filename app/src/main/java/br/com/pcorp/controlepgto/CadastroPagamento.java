@@ -15,7 +15,7 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 
 import br.com.pcorp.controlepgto.dao.PagamentoDAO;
-import br.com.pcorp.controlepgto.helper.Backup;
+import br.com.pcorp.controlepgto.helper.BackupHelper;
 import br.com.pcorp.controlepgto.helper.PagamentoHelper;
 import br.com.pcorp.controlepgto.modelo.Mensalidade;
 import br.com.pcorp.controlepgto.modelo.Pagamento;
@@ -121,9 +121,9 @@ public class CadastroPagamento extends AppCompatActivity {
                                         pagamento.getMensalidade() );
                     }
 
-                    // testar e melhorar, não está salvando, classe: Backup.
-                    Backup backup = new Backup(this);
-                    backup.backUp();
+                    // testar e melhorar, não está salvando, classe: BackupHelper.
+                    BackupHelper backupHelper = new BackupHelper(this);
+                    backupHelper.backUp();
                 }
 
                 Toast.makeText(

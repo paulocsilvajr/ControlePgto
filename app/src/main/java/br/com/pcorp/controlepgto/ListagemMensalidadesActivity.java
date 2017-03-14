@@ -2,7 +2,6 @@ package br.com.pcorp.controlepgto;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,17 +13,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
-import br.com.pcorp.controlepgto.dao.ControlePgtoDAO;
 import br.com.pcorp.controlepgto.dao.MensalidadeDAO;
-import br.com.pcorp.controlepgto.helper.Backup;
+import br.com.pcorp.controlepgto.helper.BackupHelper;
 import br.com.pcorp.controlepgto.modelo.Mensalidade;
 
 public class ListagemMensalidadesActivity extends AppCompatActivity {
@@ -184,8 +179,8 @@ public class ListagemMensalidadesActivity extends AppCompatActivity {
                         switch (which){
                             case DialogInterface.BUTTON_POSITIVE:
                                 //Ação quando o usuário clicar no botão sim
-                                Backup backup = new Backup(ListagemMensalidadesActivity.this);
-                                backup.backUp();
+                                BackupHelper backupHelper = new BackupHelper(ListagemMensalidadesActivity.this);
+                                backupHelper.backUp();
 
                                 break;
 
